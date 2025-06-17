@@ -1,0 +1,10 @@
+# server things______________________________
+port: 8000
+host: "0.0.0.0"
+model: google/gemma-3-27b-it
+
+# default value= 0.9
+# gpu-memory-utilization:	0.9
+
+max-model-len: 32768
+swap-space: 32
