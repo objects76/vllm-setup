@@ -8,8 +8,6 @@ if [ -z "$HF_TOKEN" ]; then
     exit 1
 fi
 
-token="$HF_TOKEN"
-
 base_url="https://huggingface.co/google/gemma-3-27b-it/resolve/main"
 
 files=(
@@ -38,5 +36,12 @@ mkdir -p gemma-3-27b-it && cd gemma-3-27b-it
 
 for file in "${files[@]}"; do
   echo "Downloading $file..."
-  wget --header="Authorization: Bearer $token" "$base_url/$file"
+  wget --header="Authorization: Bearer $HF_TOKEN" "$base_url/$file"
 done
+
+
+# with huggingface-cli
+# pip install huggingface_hub
+# export HF_TOKEN="your_huggingface_token_here"
+# huggingface-cli login --token $HF_TOKEN
+# huggingface-cli download google/gemma-3-27b-it
