@@ -2,10 +2,20 @@
 
 - H100 장비 비번 : root / rsup4430
 
+## 환경 변수 설정
 
+보안을 위해 Hugging Face 토큰은 환경변수로 설정하세요:
 
+```bash
+# Hugging Face 토큰 설정 (https://huggingface.co/settings/tokens 에서 발급)
+export HF_TOKEN="your_huggingface_token_here"
 
+# 영구적으로 설정하려면 ~/.bashrc 또는 ~/.zshrc에 추가
+echo 'export HF_TOKEN="your_huggingface_token_here"' >> ~/.bashrc
+source ~/.bashrc
+```
 
+## 설치 및 실행
 
 uv init gemma3 --python=3.11
 uv pip install vllm openai

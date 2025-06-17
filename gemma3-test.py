@@ -5,7 +5,6 @@ model_id = "google/gemma-3-27b-it"
 url = "http://localhost:8000/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer rsup_kd9x2b5q1z8h7j3u",
 }
 payload = {
     "model": model_id,
