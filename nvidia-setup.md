@@ -7,6 +7,9 @@ nvidia-smi
 lspci | grep -i nvidia
 
 # Check Driver Installation, get major version.
+# H100(80GB, second ver): ver=570
+nvidia-detector
+# or
 cat /proc/driver/nvidia/version
 # or
 modinfo nvidia | grep version
